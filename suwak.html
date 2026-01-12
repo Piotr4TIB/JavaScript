@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suwak kolor</title>
+</head>
+<body>
+
+    <form>
+        <label for="zakres">Ustaw wartość koloru czerwonego</label><br>
+        0
+        <input type="range" min="0" max="255" id="zakres" value="0">
+        255
+    </form>
+
+    <p id="wynik">wynik do zmiany koloru</p>
+
+    <script>
+        const zakres = document.getElementById("zakres");
+        const wynik = document.getElementById("wynik");
+
+        zakres.addEventListener("input", function () {
+            let wartosc = zakres.value;
+            wynik.style.color = `rgb(${wartosc}, 0, 0)`;
+        });
+    </script>
+
+</body>
+</html>
