@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie Piotr4TIB</title>
+</head>
+<body>
+    <button id="guzik">Dodaj akapit</button>
+    <p id="liczba"></p>
+    <script>
+        let guzik = document.querySelector("#guzik");
+        let licznik = 0
+        let akapit = " Akapit "
+        guzik.addEventListener("click", dodajparagraf)
+        function dodajparagraf(){
+            licznik++;
+            document.querySelector("#liczba").innerHTML += akapit + licznik + "<br>";
+        }
+       
+    </script>
+
+
+</body>
+</html>
